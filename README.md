@@ -64,7 +64,6 @@ started with Machine Learning Operations (MLOps).
 
 ## Commands: 
 
-* `make install` to install the dependencies
 * `make data` to process the data
 * `make train` to train the model
 * `python mlops/visualizations/visualize.py models/saved_models/model.pt data/processed/train_images.pt data/processed/train_target.pt` to visualize the model
