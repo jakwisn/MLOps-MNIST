@@ -22,6 +22,7 @@ if __name__ == "__main__":
     train_images = torch.load("data/processed/train_images.pt")
     train_target = torch.load("data/processed/train_target.pt")
 
+
     train_set = TensorDataset(train_images, train_target)
 
     model = MyNeuralNet(1, 10).to(device)

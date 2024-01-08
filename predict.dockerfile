@@ -10,10 +10,10 @@ COPY requirements.txt requirements.txt
 COPY pyproject.toml pyproject.toml
 COPY mlops/ mlops/
 COPY data/ data/
-COPY reports/ reports/
+COPY models/ models/
 
 WORKDIR /
 RUN pip install . --no-cache-dir #(1) this are not cashed on the system
 
-ENTRYPOINT ["python", "-u", "mlops/train_model.py"]
+ENTRYPOINT ["python", "-u", "mlops/predict_model.py"]
 

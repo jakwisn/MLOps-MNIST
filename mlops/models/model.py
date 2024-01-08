@@ -23,6 +23,12 @@ class MyNeuralNet(torch.nn.Module):
         self.fc = nn.Linear(64 * 7 * 7, out_features)
 
     def forward(self, x):
+
+        if x.ndim != 4:
+            raise ValueError('Expected input to a 4D tensor')
+        if x.shape[1] != 1 or x.shape[2] != 28 or x.shape[3] != 28:
+            raise ValueError('Expected each sample to have shape [1, 28, 28]')
+
         x = F.relu(self.conv1(x))
         x = F.relu(self.pool1(x))
         x = F.relu(self.conv2(x))
