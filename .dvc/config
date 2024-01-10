@@ -1,4 +1,7 @@
 [core]
-    remote = storage
+    remote = remote_storage
 ['remote "storage"']
     url = gdrive://1kO2fIXn2WvVN6XMDY4TFzQN_EhKq9-W3
+['remote "remote_storage"']
+    url = gs://beautiful_data_bucket/
+    version_aware = true
